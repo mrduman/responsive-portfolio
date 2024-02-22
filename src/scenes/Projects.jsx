@@ -4,6 +4,7 @@ import fitnessApp from "../assets/fitness.png";
 import snapgram from "../assets/snapgram.png";
 import youtube from "../assets/youtube.png";
 import LineGradient from "../components/LineGradient";
+import { motion } from "framer-motion";
 
 function Projects() {
   const portfolios = [
@@ -42,9 +43,17 @@ function Projects() {
   };
 
   return (
-    <div
+    <motion.div
       id="projects"
       name="portfolio"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
       className="bg-gradient-to-blue to-gray-800 w-full text-white md:h-fit  pt-40 pb-40"
     >
       <div className="md:w-2/7 mx-auto text-center">
@@ -83,7 +92,7 @@ function Projects() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
