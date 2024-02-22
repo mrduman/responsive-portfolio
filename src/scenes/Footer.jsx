@@ -10,7 +10,7 @@ const Footer = () => {
             ÖMER DUMAN
           </p>
           <p className="font-playfair text-md text-yellow">
-            ©2024 Duman's Portfolio
+            ©2024 Dumans Portfolio
           </p>
         </div>
       </div>
