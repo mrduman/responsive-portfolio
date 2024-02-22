@@ -49,7 +49,7 @@ const Landing = ({ setSelectedPage }) => {
             Ömer {""}
             <span
               className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
+              before:absolute before:-left-[17px]  before:-top-[20px] before:z-[-1]"
             >
               Duman
             </span>
@@ -72,6 +72,14 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
+          <AnchorLink
+            className="bg-blue text-deep-blue rounded-sm py-3 px-7 font-semibold
+              hover:bg-blue hover:text-white transition duration-500"
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
+          >
+            Contact Me
+          </AnchorLink>
           <AnchorLink
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
