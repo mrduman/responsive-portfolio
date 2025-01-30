@@ -12,22 +12,22 @@ const Landing = ({ setSelectedPage }) => {
     >
       {/* IMAGE SECTION */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
-        {isAboveLarge ? (
+        {!isAboveLarge ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
-            before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1]"
+            before:w-full before:max-w-[400px] md:before:max-w-[600px] before:h-full before:border-2 before:border-[#D48C00] before:z-[-1]"
           >
             <img
               alt="profile"
               className="rounded-t-full hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-              src="assets/duman-img.png"
+              src="assets/lumosaic.png"
             />
           </div>
         ) : (
           <img
             alt="profile"
             className="rounded-t-full z-10 w-full max-w-[400px] md:max-w-[600px]"
-            src="assets/duman-img.png"
+            src="assets/lumosaic.png"
           />
         )}
       </div>
@@ -45,18 +45,12 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Ömer {""}
-            <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[17px]  before:-top-[20px] before:z-[-1]"
-            >
-              Duman
-            </span>
+          <p className="text-6xl font-playfair z-10 text-center md:text-start text-[#D48C00]">
+            Lumosaic {""}
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Passionate Frontend Developer with a Focus on Clean Code
+          <p className="mt-10 mb-7 text-sm text-center md:text-start text-[#3A3A3A]">
+            Wir sind überall in Deutschland
           </p>
         </motion.div>
 
@@ -73,20 +67,20 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-blue text-deep-blue rounded-sm py-3 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
+            className="bg-[#A63232] text-[#F5E6CA] rounded-sm py-3 px-7 font-semibold
+              hover:bg-[#D48C00] hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            Contact Me
+            Kontakt Uns
           </AnchorLink>
           <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
+            className="rounded-r-sm bg-gradient-to-r from-[#D48C00] to-[#A63232] py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-              Let's talk.
+            <div className="bg-[#2C2C2C] hover:text-[#D48C00] transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
+              Lass uns Bilder anschauen
             </div>
           </AnchorLink>
         </motion.div>
@@ -102,7 +96,9 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <SocialMediaIcons />
+          <div className="text-[#D48C00]">
+            <SocialMediaIcons />
+          </div>
         </motion.div>
       </div>
     </section>

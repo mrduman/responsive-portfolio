@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-blue">
+    <div className="app bg-[#F8F9FA]" style={{ background: "#EFE7DA" }}>
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -50,7 +50,15 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full ">
+      <div
+        className="w-5/6 mx-auto md:h-full"
+        style={{
+          background: "#D48C00",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -60,17 +68,17 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto">
-        <motion.div
-          margin="0 0 -200px 0"
-          amount="all"
-          onViewportEnter={() => setSelectedPage("projects")}
-        >
-          <Projects />
-        </motion.div>
-      </div>
+
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div
+        className="w-5/6 mx-auto md:h-full"
+        style={{
+          background: "#014737",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
